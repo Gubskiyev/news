@@ -1,0 +1,14 @@
+footer {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+input, textarea, label { display:block; width:100%; }
+/*
+label {
+    width: 100%;
+
+}
