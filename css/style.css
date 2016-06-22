@@ -1,14 +1,8 @@
-footer {
-    text-align: center;
-}
-
-table {
-    width: 100%;
-}
-
-input, textarea, label { display:block; width:100%; }
-/*
-label {
-    width: 100%;
-
+.news {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: dotted 1px black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px ;
+    border-radius: 10px ;
 }
