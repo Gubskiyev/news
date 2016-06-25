@@ -1,10 +1,11 @@
 .news {
     padding: 10px;
     margin-bottom: 5px;
-    border: dotted 1px black;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px ;
-    border-radius: 10px ;
+    border-bottom: 1px solid #000000;
+    #border: dotted 1px black;
+    #-webkit-border-radius: 10px;
+    #-moz-border-radius: 10px ;
+    #border-radius: 10px ;
 }
 
 .footer {

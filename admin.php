@@ -7,17 +7,22 @@ $news = new News();
 if(isset($_REQUEST['submit'])) {
     if($_POST['submit'] == "Добавить") {
         $title = trim(strip_tags($_POST['title']));
+        $text = $_POST['text'];
         $date = trim(strip_tags($_POST['date']));
-        $content = trim(strip_tags($_POST['content']));
+        $author = trim(strip_tags($_POST['author']));
+        $section = $_POST['section'];
+        $sub = $_POST['sub'];
 
-        $blog->addArticle($title, $date, $content);
-    }elseif($_POST['submit'] == "Обновить") {
+        $news->addNews($title,$text,$author,$section,$sub);
+    }
+
+    if($_POST['submit'] == "Обновить") {
         $id = $_POST['id'];
         $title = trim(strip_tags($_POST['title']));
         $date = trim(strip_tags($_POST['date']));
         $content = trim(strip_tags($_POST['content']));
 
-        $blog->upArticle($id, $title, $date, $content);
+        $news->upArticle($id, $title, $date, $content);
     }
 }
 
@@ -32,13 +37,13 @@ if (isset($_GET['action'])) {
         require_once "view/admin_edit.php";
     }elseif($action == "del") {
         $id = $_GET['id'];
-        $blog->delArticle($id);
+        $news->delArticle($id);
         $articles = $blog->getAllArticles();
         require_once "view/admin_index.php";
     }
 }else{
     $action = "";
-    $articles = $blog->getAllArticles();
+    $new = $news->getAllNews();
     require_once "view/admin_index.php";
 }
 
