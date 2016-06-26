@@ -3,6 +3,8 @@ require_once "core/news_class.php";
 
 $news = new News();
 
+
+
 if(isset($_GET['section']) && isset($_GET['sub'])) {
     $section = mysql_real_escape_string(htmlentities(htmlspecialchars(trim($_GET['section']))));
     $sub = $_GET['sub'];
